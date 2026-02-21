@@ -35,7 +35,6 @@ public class FiboC {
             curr = (prev + curr) % m;
             prev = temp;
 
-            // период начинается с 0, 1
             if (prev == 0 && curr == 1) {
                 period = i + 1;
                 break;
@@ -43,12 +42,10 @@ public class FiboC {
         }
 
         n = n % period;
-
         if (n <= 1) return n;
 
         prev = 0;
         curr = 1;
-
         for (int i = 2; i <= n; i++) {
             long temp = curr;
             curr = (prev + curr) % m;
